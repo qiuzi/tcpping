@@ -867,8 +867,8 @@ int main(int argc, char *argv[])
 	}
 
 	dest_name = he->h_name;
-	printf("TCP PING %s %s\n", dest_name, 
-		   dest_quad, dest_port
+	printf("TCP PING %s %s %s\n", dest_name, 
+		   dest_quad, src_quad
 	);
 
 	/* start seq# somewhere random so we're not SO obvious */

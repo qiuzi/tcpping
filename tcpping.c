@@ -443,14 +443,14 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
 		}
 
 		/* Raise the flag to the user that we saw it... */
-		printf("%s from %s: seq=%u ttl=%d time=%.3f%s\n", 
+/*		printf("%s from %s: seq=%u ttl=%d time=%.3f%s\n", 
 			flags,
 			inet_ntoa(ip->ip_src), 
 			tcpseq_to_orderseq(ntohl(tcp->th_ack) - 1),
 			ip->ip_ttl,
 			ms, units
 		);
-
+*/
 		if (ms < min_ping || min_ping == -1) {
 			min_ping = ms;
 		}
@@ -737,7 +737,7 @@ int main(int argc, char *argv[])
 	int r;
 	int c;
 	char *device_name = NULL;
-	int count = -1;
+	int count = 5;
 	long interval = 1000;
 	struct hostent *he;
 	int pipefds[2];

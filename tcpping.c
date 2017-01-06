@@ -227,9 +227,9 @@ void sanitize_environment()
 
 void print_stats(int junk)
 {
-	printf("\n");
+//	printf("\n");
 	
-	printf("--- %s TCP ping statistics ---\n", dest_name);
+//	printf("--- %s TCP ping statistics ---\n", dest_name);
 	total_syns = (total_syns != 0 ? total_syns : 1);
 	printf("%d SYN packets transmitted, %d SYN/ACKs and %d RSTs received, %.1f%% packet loss\n", 
 		total_syns, total_synacks, total_rsts, 
